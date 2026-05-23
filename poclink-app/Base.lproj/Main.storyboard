@@ -48,24 +48,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-7k-9a0">
-                                <rect key="frame" x="40" y="200" width="313" height="44"/>
-                                <color key="backgroundColor" red="0.0" green="0.47843137250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="谷歌登录"/>
-                                <connections>
-                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3u-8a-7d8"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待操作..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-9c-2n8">
-                                <rect key="frame" x="40" y="300" width="313" height="20"/>
+                                <rect key="frame" x="40" y="200" width="313" height="20"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9x-3f-7b5">
-                                <rect key="frame" x="40" y="400" width="313" height="100"/>
+                                <rect key="frame" x="40" y="300" width="313" height="100"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <state key="normal" title="按住讲话"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -79,19 +69,15 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="x8b-7k-9a0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0b7-7b-5a8"/>
-                            <constraint firstItem="x8b-7k-9a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="6h1-2a-1x5"/>
-                            <constraint firstItem="x8b-7k-9a0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="a2x-6j-3l4"/>
-                            <constraint firstItem="l9x-3f-7b5" firstAttribute="trailing" secondItem="x8b-7k-9a0" secondAttribute="trailing" id="b6x-3k-4m7"/>
-                            <constraint firstItem="k5b-9c-2n8" firstAttribute="top" secondItem="x8b-7k-9a0" secondAttribute="bottom" constant="56" id="1n7-6s-5c3"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="f1x-9c-5z7"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="x9k-2m-4g2"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="141" id="6h1-2a-1x5"/>
+                            <constraint firstItem="l9x-3f-7b5" firstAttribute="trailing" secondItem="k5b-9c-2n8" secondAttribute="trailing" id="b6x-3k-4m7"/>
+                            <constraint firstItem="l9x-3f-7b5" firstAttribute="leading" secondItem="k5b-9c-2n8" secondAttribute="leading" id="k2f-4j-1n9"/>
                             <constraint firstItem="l9x-3f-7b5" firstAttribute="top" secondItem="k5b-9c-2n8" secondAttribute="bottom" constant="80" id="3l6-9d-3x4"/>
-                            <constraint firstItem="k5b-9c-2n8" firstAttribute="leading" secondItem="x8b-7k-9a0" secondAttribute="leading" id="f1x-9c-5z7"/>
-                            <constraint firstItem="k5b-9c-2n8" firstAttribute="trailing" secondItem="x8b-7k-9a0" secondAttribute="trailing" id="x9k-2m-4g2"/>
-                            <constraint firstItem="l9x-3f-7b5" firstAttribute="leading" secondItem="x8b-7k-9a0" secondAttribute="leading" id="k2f-4j-1n9"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="loginButton" destination="x8b-7k-9a0" id="2d8-2j-7x9"/>
                         <outlet property="speakButton" destination="l9x-3f-7b5" id="7y9-5b-2n8"/>
                         <outlet property="statusLabel" destination="k5b-9c-2n8" id="a4c-1x-8p3"/>
                     </connections>

@@ -32,25 +32,29 @@
     // 打开日志（开发阶段建议打开）
     [SUPSDK_M openLog:YES];
     
+    // 监听登录成功通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onLoginSuccess:)
+                                                 name:kPOST_CMCC_NOTIFICATION_OTHER_LOGIN
+                                               object:nil];
+    
     return YES;
 }
 
-
-#pragma mark - UISceneSession lifecycle
-
-
-- (UISceneConfiguration *)application:(UIApplication *)application configurationForConnectingSceneSession:(UISceneSession *)connectingSceneSession options:(UISceneConnectionOptions *)options {
-    // Called when a new scene session is being created.
-    // Use this method to select a configuration to create the new scene with.
-    return [[UISceneConfiguration alloc] initWithName:@"Default Configuration" sessionRole:connectingSceneSession.role];
+// UINavigationControllerDelegate - 统一监听路由变化
+- (void)navigationController:(UINavigationController *)navigationController willShowViewController:(UIViewController *)viewController animated:(BOOL)animated {
+    UIViewController *fromVC = navigationController.topViewController;
+    NSString *toVC = NSStringFromClass(viewController.class);
+    
+    if (fromVC) {
+        NSLog(@"🔄 路由变化: %@ -> %@", NSStringFromClass(fromVC.class), toVC);
+    }
 }
 
-
-- (void)application:(UIApplication *)application didDiscardSceneSessions:(NSSet<UISceneSession *> *)sceneSessions {
-    // Called when the user discards a scene session.
-    // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
-    // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
+// 登录成功回调
+- (void)onLoginSuccess:(NSNotification *)notification {
+    CmccUser *user = notification.object;
+    NSLog(@"用户已登录: %@", user.name);
 }
-
 
 @end

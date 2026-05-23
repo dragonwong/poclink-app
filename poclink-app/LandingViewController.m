@@ -83,7 +83,8 @@
 }
 
 - (void)homeButtonTapped {
-    ViewController *homeVC = [[ViewController alloc] init];
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ViewController *homeVC = [mainStoryboard instantiateViewControllerWithIdentifier:@"ViewController"];
     [self.navigationController pushViewController:homeVC animated:YES];
 }
 

@@ -9,11 +9,7 @@
 
 @interface ViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIButton *speakButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
 
-- (IBAction)loginButtonTapped:(UIButton *)sender;
-
 @end
-

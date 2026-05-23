@@ -134,7 +134,7 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
                     self.statusLabel.text = @"登录成功！";
                     
                     // 登录成功后返回首页
-                    // [self.navigationController popToRootViewControllerAnimated:YES];
+                    [self.navigationController popToRootViewControllerAnimated:YES];
                 } else {
                     NSLog(@"=== PocLink 登录失败 === errorStr: %@", errorStr);
                     self.statusLabel.text = [NSString stringWithFormat:@"登录失败: %@", errorStr];

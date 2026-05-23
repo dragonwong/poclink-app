@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Zlp-Nav-Root">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Zlp-Nav-Scene">
+            <objects>
+                <navigationController id="Zlp-Nav-Root" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nav-bar-id">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="landing-vc-id" kind="relationship" relationship="rootViewController" id="nav-root-seg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nav-first-resp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-800" y="131"/>
+        </scene>
+        <!--Landing View Controller-->
+        <scene sceneID="landing-scene-id">
+            <objects>
+                <viewController id="landing-vc-id" customClass="LandingViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="landing-view-id">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="landing-safe-area"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="landing-nav-item"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="landing-first-resp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0" y="131"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x8b-7k-9a0">
+                                <rect key="frame" x="40" y="200" width="313" height="44"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="谷歌登录"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m3u-8a-7d8"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待操作..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k5b-9c-2n8">
+                                <rect key="frame" x="40" y="300" width="313" height="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l9x-3f-7b5">
+                                <rect key="frame" x="40" y="400" width="313" height="100"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="按住讲话"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor">
+                                        <color key="value" red="0.0" green="0.47843137250000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="x8b-7k-9a0" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="0b7-7b-5a8"/>
+                            <constraint firstItem="x8b-7k-9a0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="6h1-2a-1x5"/>
+                            <constraint firstItem="x8b-7k-9a0" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-40" id="a2x-6j-3l4"/>
+                            <constraint firstItem="l9x-3f-7b5" firstAttribute="trailing" secondItem="x8b-7k-9a0" secondAttribute="trailing" id="b6x-3k-4m7"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="top" secondItem="x8b-7k-9a0" secondAttribute="bottom" constant="56" id="1n7-6s-5c3"/>
+                            <constraint firstItem="l9x-3f-7b5" firstAttribute="top" secondItem="k5b-9c-2n8" secondAttribute="bottom" constant="80" id="3l6-9d-3x4"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="leading" secondItem="x8b-7k-9a0" secondAttribute="leading" id="f1x-9c-5z7"/>
+                            <constraint firstItem="k5b-9c-2n8" firstAttribute="trailing" secondItem="x8b-7k-9a0" secondAttribute="trailing" id="x9k-2m-4g2"/>
+                            <constraint firstItem="l9x-3f-7b5" firstAttribute="leading" secondItem="x8b-7k-9a0" secondAttribute="leading" id="k2f-4j-1n9"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loginButton" destination="x8b-7k-9a0" id="2d8-2j-7x9"/>
+                        <outlet property="speakButton" destination="l9x-3f-7b5" id="7y9-5b-2n8"/>
+                        <outlet property="statusLabel" destination="k5b-9c-2n8" id="a4c-1x-8p3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="500" y="131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411760000001" green="0.23529411760000001" blue="0.26274509800000001" alpha="0.6" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

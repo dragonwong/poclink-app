@@ -32,9 +32,15 @@
     // 打开日志（开发阶段建议打开）
     [SUPSDK_M openLog:YES];
     
-    // 监听登录成功通知
+    // 监听登录成功通知（自己登录）
     [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(onLoginSuccess:)
+                                             selector:@selector(onSelfLoginSuccess:)
+                                                 name:kPOST_CMCC_NOTIFICATION_LOGIN
+                                               object:nil];
+    
+    // 监听其他位置登录通知
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(onOtherLogin:)
                                                  name:kPOST_CMCC_NOTIFICATION_OTHER_LOGIN
                                                object:nil];
     
@@ -51,10 +57,15 @@
     }
 }
 
-// 登录成功回调
-- (void)onLoginSuccess:(NSNotification *)notification {
+// 自己登录成功回调
+- (void)onSelfLoginSuccess:(NSNotification *)notification {
     CmccUser *user = notification.object;
-    NSLog(@"用户已登录: %@", user.name);
+    NSLog(@"✅ 登录成功: %@ (uid: %@, account: %@)", user.name, user.uid, user.account);
+}
+
+// 其他位置登录回调
+- (void)onOtherLogin:(NSNotification *)notification {
+    NSLog(@"⚠️ 账号已在其他位置登录");
 }
 
 @end

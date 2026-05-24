@@ -19,7 +19,9 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
 @interface LoginViewController ()
 
 @property (nonatomic, strong) UIButton *googleLoginButton;
+@property (nonatomic, strong) UIButton *voiceLoginButton;
 @property (nonatomic, strong) UILabel *statusLabel;
+@property (nonatomic, copy) NSString *savedAccount;
 
 @end
 
@@ -68,20 +70,37 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
     self.statusLabel.numberOfLines = 0;
     self.statusLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.statusLabel];
-    
+
+    // 登录语音服务按钮
+    self.voiceLoginButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.voiceLoginButton setTitle:@"登录语音服务" forState:UIControlStateNormal];
+    self.voiceLoginButton.backgroundColor = [UIColor systemGreenColor];
+    [self.voiceLoginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.voiceLoginButton.titleLabel.font = [UIFont boldSystemFontOfSize:16];
+    self.voiceLoginButton.layer.cornerRadius = 8;
+    self.voiceLoginButton.enabled = NO;
+    self.voiceLoginButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.voiceLoginButton addTarget:self action:@selector(voiceLoginTapped) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:self.voiceLoginButton];
+
     // 布局
     [NSLayoutConstraint activateConstraints:@[
         [titleLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
         [titleLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:-100],
-        
+
         [self.googleLoginButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
         [self.googleLoginButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
         [self.googleLoginButton.topAnchor constraintEqualToAnchor:titleLabel.bottomAnchor constant:60],
         [self.googleLoginButton.heightAnchor constraintEqualToConstant:50],
-        
+
         [self.statusLabel.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
         [self.statusLabel.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
         [self.statusLabel.topAnchor constraintEqualToAnchor:self.googleLoginButton.bottomAnchor constant:30],
+
+        [self.voiceLoginButton.leadingAnchor constraintEqualToAnchor:self.googleLoginButton.leadingAnchor],
+        [self.voiceLoginButton.trailingAnchor constraintEqualToAnchor:self.googleLoginButton.trailingAnchor],
+        [self.voiceLoginButton.topAnchor constraintEqualToAnchor:self.statusLabel.bottomAnchor constant:30],
+        [self.voiceLoginButton.heightAnchor constraintEqualToConstant:50],
     ]];
 }
 
@@ -131,10 +150,9 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (model && !errorStr) {
                     NSLog(@"=== PocLink 登录成功 === model: %@", model);
-                    self.statusLabel.text = @"登录成功！";
-                    
-                    // 登录成功后返回首页
-                    [self.navigationController popToRootViewControllerAnimated:YES];
+                    self.statusLabel.text = @"登录成功！请点击下方按钮登录语音服务";
+                    self.savedAccount = model.account;
+                    self.voiceLoginButton.enabled = YES;
                 } else {
                     NSLog(@"=== PocLink 登录失败 === errorStr: %@", errorStr);
                     self.statusLabel.text = [NSString stringWithFormat:@"登录失败: %@", errorStr];
@@ -143,6 +161,19 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
             });
         }];
     }];
+}
+
+- (void)voiceLoginTapped {
+    NSLog(@"=== 点击登录语音服务 === account: %@", self.savedAccount);
+    int result = [SUPSDK_M login_account:self.savedAccount password:@"1" type:0];
+    NSLog(@"=== 登录语音服务结果: %d ===", result);
+    if (result == 0) {
+        self.statusLabel.text = @"语音服务登录成功！";
+        // 登录成功后返回首页
+        // [self.navigationController popToRootViewControllerAnimated:YES]; 
+    } else {
+        self.statusLabel.text = @"语音服务登录失败";
+    }
 }
 
 @end

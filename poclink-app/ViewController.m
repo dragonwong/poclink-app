@@ -22,6 +22,9 @@
     
     // 设置讲话按钮为长按模式
     [self setupSpeakButton];
+
+    // 设置加入群聊按钮
+    [self setupJoinGroupButton];
 }
 
 // 设置通知监听
@@ -57,15 +60,49 @@
     [self.speakButton addGestureRecognizer:longPress];
 }
 
+// 设置加入群聊按钮
+- (void)setupJoinGroupButton {
+    self.joinGroupButton = [UIButton buttonWithType:UIButtonTypeSystem];
+    [self.joinGroupButton setTitle:@"加入群聊" forState:UIControlStateNormal];
+    self.joinGroupButton.titleLabel.font = [UIFont boldSystemFontOfSize:20];
+    self.joinGroupButton.backgroundColor = [UIColor systemGreenColor];
+    [self.joinGroupButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    self.joinGroupButton.layer.cornerRadius = 8;
+    [self.joinGroupButton addTarget:self action:@selector(joinGroup:) forControlEvents:UIControlEventTouchUpInside];
+
+    self.joinGroupButton.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.view addSubview:self.joinGroupButton];
+
+    [NSLayoutConstraint activateConstraints:@[
+        [self.joinGroupButton.leadingAnchor constraintEqualToAnchor:self.speakButton.leadingAnchor],
+        [self.joinGroupButton.trailingAnchor constraintEqualToAnchor:self.speakButton.trailingAnchor],
+        [self.joinGroupButton.topAnchor constraintEqualToAnchor:self.speakButton.bottomAnchor constant:20],
+        [self.joinGroupButton.heightAnchor constraintEqualToAnchor:self.speakButton.heightAnchor]
+    ]];
+}
+
+// 加入群聊
+- (void)joinGroup:(UIButton *)sender {
+    NSLog(@"=== 点击加入群聊 ===");
+    int joinResult = [SUPSDK_M join_group_gid:@"1186312136837562748"
+                                   contact_id:nil
+                                        token:nil
+                                     is_limit:@"0"];
+    NSLog(@"加入群组 1186312136837562748 结果: %d", joinResult);
+    self.statusLabel.text = joinResult == 0 ? @"正在加入群聊..." : @"加入群聊失败";
+}
+
 // 长按讲话
 - (void)onSpeakLongPress:(UILongPressGestureRecognizer *)gesture {
     if (gesture.state == UIGestureRecognizerStateBegan) {
+        NSLog(@"=== 开始讲话 ===");
         // 开始讲话
         int result = [SUPSDK_M start_speak:NO];
         self.statusLabel.text = result == 0 ? @"正在讲话..." : @"无法讲话";
         self.speakButton.backgroundColor = [UIColor redColor];
     } else if (gesture.state == UIGestureRecognizerStateEnded ||
                gesture.state == UIGestureRecognizerStateCancelled) {
+        NSLog(@"=== 结束讲话 ===");
         // 结束讲话
         [SUPSDK_M stop_speak];
         self.statusLabel.text = @"已结束讲话";

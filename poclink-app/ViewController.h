@@ -11,5 +11,6 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *speakButton;
 @property (weak, nonatomic) IBOutlet UILabel *statusLabel;
+@property (nonatomic, strong) UIButton *joinGroupButton;
 
 @end

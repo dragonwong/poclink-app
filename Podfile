@@ -11,6 +11,7 @@ target 'poclink-app' do
   pod 'YYKit'
   pod 'MMKV'
   pod 'GoogleSignIn'
+  pod 'CocoaAsyncSocket'
 
 end
 

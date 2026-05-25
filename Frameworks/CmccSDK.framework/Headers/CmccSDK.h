@@ -32,9 +32,11 @@
 #import "CmccRelatedContact.h"
 #import "CmccDevGroupChanged.h"
 #import "CmccDeviceMembers.h"
+#import "CmccServerInfo.h"
 
 #import "SUPSDKManager.h"
 #import "CmccDataManager.h"
+#import "NTPTimerClient.h"
 
 //! Project version number for CmccSDK.
 FOUNDATION_EXPORT double CmccSDKVersionNumber;

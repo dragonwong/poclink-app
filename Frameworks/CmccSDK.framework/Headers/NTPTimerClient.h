@@ -1,0 +1,20 @@
+//
+//  NTPTimerClient.h
+//  CmccSDK
+//
+//  Created by broad on 2026/2/5.
+//
+
+#import <Foundation/Foundation.h>
+
+NS_ASSUME_NONNULL_BEGIN
+
+@interface NTPTimerClient : NSObject
+
++ (instancetype)sharedInstance;
+- (void)start;
+- (NSDate *)getNetworkTime;
+
+@end
+
+NS_ASSUME_NONNULL_END

@@ -46,7 +46,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *msg;
 
 /**
- 消息状态
+ 消息状态  0 未处理  1同意 2 拒绝
  */
 @property (assign, nonatomic) NSInteger msg_type;
 

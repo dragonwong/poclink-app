@@ -22,9 +22,16 @@
     //               agent:@"https://apidev.xin-ptt.com/superProxyPoc"
     //        version_type:APP_VERSION_DEVELOPMENT];
     [SUPSDK_M init_dns:@"52.1.120.181:36003,52.1.120.181:35003"
+          version_type:APP_VERSION_DEVELOPMENT
+        serviceAudio:@""
+                 api:@""
+              extend:@""
                 html:@"https://dev.broadptt.com/devweb/superptt_ys/superptt_poclink/zh/html/"
-                agent:@"http://agent.poclink.com:36002"
-        version_type:APP_VERSION_DEVELOPMENT];
+              update:@""
+               agent:@"http://agent.poclink.com:36002"
+                 sos:@""
+            shareMsg:@""
+               fence:@""];
 
     // 打开日志（开发阶段建议打开）
     [SUPSDK_M openLog:YES];

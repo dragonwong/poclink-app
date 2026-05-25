@@ -284,7 +284,7 @@ static NSString *const kPOST_CMCC_NOTIFICATION_PHONECODE_ERROR = @"kPOST_CMCC_NO
 
 
 #pragma mark 核心库相关通知
-//EN_RR_RESULT 服务器异步回调通知 附带(CmccAckResult对象)
+//EN_RR_RESULT 服务器异步回调通知 附带(CmccAckResult 对象)
 static NSString *const kPOST_CMCC_NOTIFICATION_EN_RR_RESULT = @"kPOST_CMCC_NOTIFICATION_EN_RR_RESULT";
 //登录成功 附带(CmccUser对象)
 static NSString *const kPOST_CMCC_NOTIFICATION_LOGIN = @"kPOST_CMCC_NOTIFICATION_LOGIN";

@@ -229,7 +229,7 @@ typedef void(^dataQueryComplete)(id queryObject);
 /**
  获取sos紧急联系人
  */
--(NSArray<CmccUser *>*)get_sos_contact_users;
+-(NSArray<CmccRelatedContact *>*)get_sos_contact_users;
 #pragma mark/************************ 群组列表 ************************/
 /**
  保存所有群组信息

@@ -6,7 +6,8 @@
 //
 
 #import "LandingViewController.h"
-#import "LoginViewController.h"
+#import "EmailLoginViewController.h"
+#import "GoogleLoginViewController.h"
 #import "ViewController.h"
 
 @interface LandingViewController ()
@@ -32,10 +33,15 @@
     titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:titleLabel];
     
-    // 登录按钮
-    UIButton *loginButton = [self createButtonWithTitle:@"登录"
-                                               backgroundColor:[UIColor systemBlueColor]
-                                                        action:@selector(loginButtonTapped)];
+    // 谷歌登录按钮
+    UIButton *googleLoginButton = [self createButtonWithTitle:@"谷歌登录"
+                                                    backgroundColor:[UIColor systemBlueColor]
+                                                             action:@selector(googleLoginButtonTapped)];
+    
+    // 邮箱登录按钮
+    UIButton *emailLoginButton = [self createButtonWithTitle:@"邮箱登录"
+                                                  backgroundColor:[UIColor systemBlueColor]
+                                                           action:@selector(emailLoginButtonTapped)];
     
     // 原首页按钮
     UIButton *homeButton = [self createButtonWithTitle:@"进入首页"
@@ -46,18 +52,24 @@
     [NSLayoutConstraint activateConstraints:@[
         // 标题居中偏上
         [titleLabel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor],
-        [titleLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:-150],
+        [titleLabel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor constant:-180],
         
-        // 登录按钮
-        [loginButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
-        [loginButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
-        [loginButton.topAnchor constraintEqualToAnchor:titleLabel.bottomAnchor constant:80],
-        [loginButton.heightAnchor constraintEqualToConstant:50],
+        // 谷歌登录按钮
+        [googleLoginButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
+        [googleLoginButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
+        [googleLoginButton.topAnchor constraintEqualToAnchor:titleLabel.bottomAnchor constant:80],
+        [googleLoginButton.heightAnchor constraintEqualToConstant:50],
+        
+        // 邮箱登录按钮
+        [emailLoginButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
+        [emailLoginButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
+        [emailLoginButton.topAnchor constraintEqualToAnchor:googleLoginButton.bottomAnchor constant:20],
+        [emailLoginButton.heightAnchor constraintEqualToConstant:50],
         
         // 原首页按钮
         [homeButton.leadingAnchor constraintEqualToAnchor:self.view.leadingAnchor constant:40],
         [homeButton.trailingAnchor constraintEqualToAnchor:self.view.trailingAnchor constant:-40],
-        [homeButton.topAnchor constraintEqualToAnchor:loginButton.bottomAnchor constant:20],
+        [homeButton.topAnchor constraintEqualToAnchor:emailLoginButton.bottomAnchor constant:20],
         [homeButton.heightAnchor constraintEqualToConstant:50],
     ]];
 }
@@ -77,8 +89,13 @@
     return button;
 }
 
-- (void)loginButtonTapped {
-    LoginViewController *loginVC = [[LoginViewController alloc] init];
+- (void)googleLoginButtonTapped {
+    GoogleLoginViewController *googleLoginVC = [[GoogleLoginViewController alloc] init];
+    [self.navigationController pushViewController:googleLoginVC animated:YES];
+}
+
+- (void)emailLoginButtonTapped {
+    EmailLoginViewController *loginVC = [[EmailLoginViewController alloc] init];
     [self.navigationController pushViewController:loginVC animated:YES];
 }
 

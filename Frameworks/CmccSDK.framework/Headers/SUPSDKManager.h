@@ -25,14 +25,28 @@ NS_ASSUME_NONNULL_BEGIN
  初始化 网路环境
  
  @param dns 核心库
- @param agent 代理
- @param html 隐私和用户协议
  @param version_type 版本控制
+ @param audioHost 录音相关
+ @param apiHost 目前没用到
+ @param extendHost 扩展接口
+ @param html 隐私和用户协议
+ @param update 目前没用到
+ @param agent 代理
+ @param sos SOS相关
+ @param shareMsg 群公告 群内图文发送
+ @param fence 围栏
  */
 -(void)init_dns:(NSString *)dns
+   version_type:(APP_VERSION_TYPE)version_type
+   serviceAudio:(NSString *)audioHost
+            api:(NSString *)apiHost
+         extend:(NSString *)extendHost
            html:(NSString *)html
+         update:(NSString *)update
           agent:(NSString *)agent
-   version_type:(APP_VERSION_TYPE)version_type;
+            sos:(NSString *)sos
+       shareMsg:(NSString *)shareMsg
+          fence:(NSString *)fence;
 
 /**
  读取本地配置文件
@@ -82,7 +96,12 @@ NS_ASSUME_NONNULL_BEGIN
  @param account 账号
  */
 - (void)PostIsExistAccount:(NSString *)account callBack:(void(^)(NSURLSessionDataTask* _Nonnull task,SUPBaseModel *model,NSString* errorStr))block;
-
+/**
+ 判断第三方账号（谷歌 facebook apple）是否存在
+ @param idToken  token
+ @param type  2：Apple、3：Google、5：Facebook
+ */
+- (void)PostIsExistIdToken:(NSString *)idToken type:(NSInteger)type callBack:(void(^)(NSURLSessionDataTask* _Nonnull task,SUPBaseModel *model,NSString* errorStr))block;
 /**
  根据账号获取url
  @param account 账号
@@ -150,7 +169,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  语音服务登陆
  
- 注意：该接口需要登录的账号绑定了终端设置才返回成功 如果账号没有绑设备 需要先做设备绑定逻辑
+ 注意：该接口需要登录的账号绑定了终端设备才返回成功 如果账号没有绑设备 需要先做设备绑定逻辑
  如果账号有绑定设置才返回登录成功通知
  
  @param account 账号
@@ -222,6 +241,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 -(BOOL)is_listening;
 
+/**
+ 获取sos紧急联系人
+ */
+- (NSArray<CmccRelatedContact*> *)query_user_related_contact;
 #pragma mark -------------终端------------------
 /**
  获取成员状态

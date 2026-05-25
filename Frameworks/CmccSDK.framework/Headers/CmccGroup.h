@@ -30,6 +30,10 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (copy, nonatomic) NSString *creator;
 /**
+ 创建者id
+ */
+@property (copy, nonatomic) NSString *creator_name;
+/**
  群组优先级
  */
 @property (assign, nonatomic) NSInteger priority;
@@ -74,6 +78,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (assign, nonatomic) NSInteger member_ingroup;
 
+@property (assign, nonatomic) NSInteger audio_disabled_begin;
+
+@property (assign, nonatomic) NSInteger audio_disabled_end;
 /**
  群组是否禁言
  */
@@ -138,6 +145,12 @@ NS_ASSUME_NONNULL_BEGIN
  //时间秒（无值或者0表示普通永久群组，>0时表示到期的时间）
  */
 @property (assign, nonatomic) NSInteger group_expire;
+
+@property (assign, nonatomic) NSInteger max_speech_second;
+@property (assign, nonatomic) NSInteger department;
+@property (assign, nonatomic) BOOL nameflag;
+@property (assign, nonatomic) BOOL is_large;
+
 #pragma mark --------UI→附加参-----------
 /**
  是否是当前群组
@@ -217,6 +230,19 @@ NS_ASSUME_NONNULL_BEGIN
  是否分享位置至群组
  */
 @property (assign, nonatomic) BOOL isShareLocation;
+/**
+ 是否展示进群申请
+ */
+@property (assign, nonatomic) BOOL isShowApply;
+
+/**
+ 当前用户在该群组中的角色 0 普通成员 1群主 2 管理员 3 群主是该app用户绑定的设备 4 既是管理员、群主是该app用户绑定的设备
+ */
+@property (assign, nonatomic) NSInteger role;
+/**
+ 最后一次查看群组邀请列表的时间戳
+ */
+@property (assign, nonatomic) NSInteger viewInviteTime;
 
 @end
 

@@ -52,6 +52,8 @@ static NSString *const kWebClientID = @"197820705936-kv78gd4k4mshht8beu4pnn22fa5
     [self.googleLoginButton setTitleColor:[UIColor colorWithRed:0.25 green:0.25 blue:0.25 alpha:1.0] forState:UIControlStateNormal];
     self.googleLoginButton.titleLabel.font = [UIFont boldSystemFontOfSize:14];
     self.googleLoginButton.layer.cornerRadius = 8;
+    self.googleLoginButton.layer.borderWidth = 1;
+    self.googleLoginButton.layer.borderColor = [UIColor colorWithRed:0.8 green:0.8 blue:0.8 alpha:1.0].CGColor;
     self.googleLoginButton.translatesAutoresizingMaskIntoConstraints = NO;
     [self.googleLoginButton addTarget:self action:@selector(googleLoginTapped) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:self.googleLoginButton];

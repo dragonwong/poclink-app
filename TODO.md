@@ -4,15 +4,21 @@
 
 ### 登录语音服务还是失败
 
+> 已解决：缺少 MMKV 库初始化
+
 当前三方登录流程：
 
 - 谷歌登录 signInWithPresentingViewController
 - 三方登录 PostAuthWithIdToken
 - 获取 url GetServiceUrlWithAccount
-- 设置 url setExtendUrl
+- 设置 url setExtendUrl（不需要执行）
 - 登录语音服务 login_account
 
 login_account 返回值 -1
+
+> -1 也没关系，关键看 kPOST_CMCC_NOTIFICATION_LOGIN 是否触发。
+> 
+> 至于 -1 到底什么意思，对面开发始终没有说。
 
 kPOST_CMCC_NOTIFICATION_LOGIN 和 kPOST_CMCC_NOTIFICATION_OTHER_LOGIN 都没有通知
 

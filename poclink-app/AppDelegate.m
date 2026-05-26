@@ -7,6 +7,10 @@
 
 #import "AppDelegate.h"
 #import <CmccSDK/CmccSDK.h>
+#import <MMKV/MMKV.h>
+
+// static NSString * const kPTTInitDNS = @"52.1.120.181:36003,52.1.120.181:35003";
+static NSString * const kPTTInitDNS = @"disp-us.poclink.com:9099,disp.poclink.com:9099";
 
 @interface AppDelegate ()
 
@@ -16,12 +20,15 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // 初始化本地 KV 存储，关键，勿动
+    [MMKV initializeMMKV:nil];
+
     // 初始化 PTT SDK
     // [SUPSDK_M init_dns:@"49.73.61.229:9899,49.73.61.229:9889"
     //                html:@"https://dev.broadptt.com/devweb/superptt_ys/superptt_poclink/zh/html/"
     //               agent:@"https://apidev.xin-ptt.com/superProxyPoc"
     //        version_type:APP_VERSION_DEVELOPMENT];
-    [SUPSDK_M init_dns:@"52.1.120.181:36003,52.1.120.181:35003"
+    [SUPSDK_M init_dns:kPTTInitDNS
           version_type:APP_VERSION_DEVELOPMENT
         serviceAudio:@""
                  api:@""

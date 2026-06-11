@@ -2310,83 +2310,83 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - boost (from `../poclink-js/node_modules/react-native/third-party-podspecs/boost.podspec`)
+  - boost (from `../../poclink-js/node_modules/react-native/third-party-podspecs/boost.podspec`)
   - CocoaAsyncSocket
-  - DoubleConversion (from `../poclink-js/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
-  - fast_float (from `../poclink-js/node_modules/react-native/third-party-podspecs/fast_float.podspec`)
-  - FBLazyVector (from `../poclink-js/node_modules/react-native/Libraries/FBLazyVector`)
-  - fmt (from `../poclink-js/node_modules/react-native/third-party-podspecs/fmt.podspec`)
-  - glog (from `../poclink-js/node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - DoubleConversion (from `../../poclink-js/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
+  - fast_float (from `../../poclink-js/node_modules/react-native/third-party-podspecs/fast_float.podspec`)
+  - FBLazyVector (from `../../poclink-js/node_modules/react-native/Libraries/FBLazyVector`)
+  - fmt (from `../../poclink-js/node_modules/react-native/third-party-podspecs/fmt.podspec`)
+  - glog (from `../../poclink-js/node_modules/react-native/third-party-podspecs/glog.podspec`)
   - GoogleSignIn
-  - hermes-engine (from `../poclink-js/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
+  - hermes-engine (from `../../poclink-js/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec`)
   - MJExtension (~> 3.0.13)
   - MMKV
-  - RCT-Folly (from `../poclink-js/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
-  - RCTDeprecation (from `../poclink-js/node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
-  - RCTRequired (from `../poclink-js/node_modules/react-native/Libraries/Required`)
-  - RCTTypeSafety (from `../poclink-js/node_modules/react-native/Libraries/TypeSafety`)
-  - React (from `../poclink-js/node_modules/react-native/`)
-  - React-callinvoker (from `../poclink-js/node_modules/react-native/ReactCommon/callinvoker`)
-  - React-Core (from `../poclink-js/node_modules/react-native/`)
-  - React-Core/RCTWebSocket (from `../poclink-js/node_modules/react-native/`)
-  - React-CoreModules (from `../poclink-js/node_modules/react-native/React/CoreModules`)
-  - React-cxxreact (from `../poclink-js/node_modules/react-native/ReactCommon/cxxreact`)
-  - React-debug (from `../poclink-js/node_modules/react-native/ReactCommon/react/debug`)
-  - React-defaultsnativemodule (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/defaults`)
-  - React-domnativemodule (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/dom`)
-  - React-Fabric (from `../poclink-js/node_modules/react-native/ReactCommon`)
-  - React-FabricComponents (from `../poclink-js/node_modules/react-native/ReactCommon`)
-  - React-FabricImage (from `../poclink-js/node_modules/react-native/ReactCommon`)
-  - React-featureflags (from `../poclink-js/node_modules/react-native/ReactCommon/react/featureflags`)
-  - React-featureflagsnativemodule (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/featureflags`)
-  - React-graphics (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/graphics`)
-  - React-hermes (from `../poclink-js/node_modules/react-native/ReactCommon/hermes`)
-  - React-idlecallbacksnativemodule (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks`)
-  - React-ImageManager (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios`)
-  - React-jserrorhandler (from `../poclink-js/node_modules/react-native/ReactCommon/jserrorhandler`)
-  - React-jsi (from `../poclink-js/node_modules/react-native/ReactCommon/jsi`)
-  - React-jsiexecutor (from `../poclink-js/node_modules/react-native/ReactCommon/jsiexecutor`)
-  - React-jsinspector (from `../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern`)
-  - React-jsinspectorcdp (from `../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/cdp`)
-  - React-jsinspectornetwork (from `../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/network`)
-  - React-jsinspectortracing (from `../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/tracing`)
-  - React-jsitooling (from `../poclink-js/node_modules/react-native/ReactCommon/jsitooling`)
-  - React-jsitracing (from `../poclink-js/node_modules/react-native/ReactCommon/hermes/executor/`)
-  - React-logger (from `../poclink-js/node_modules/react-native/ReactCommon/logger`)
-  - React-Mapbuffer (from `../poclink-js/node_modules/react-native/ReactCommon`)
-  - React-microtasksnativemodule (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
-  - React-NativeModulesApple (from `../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
-  - React-oscompat (from `../poclink-js/node_modules/react-native/ReactCommon/oscompat`)
-  - React-perflogger (from `../poclink-js/node_modules/react-native/ReactCommon/reactperflogger`)
-  - React-performancetimeline (from `../poclink-js/node_modules/react-native/ReactCommon/react/performance/timeline`)
-  - React-RCTActionSheet (from `../poclink-js/node_modules/react-native/Libraries/ActionSheetIOS`)
-  - React-RCTAnimation (from `../poclink-js/node_modules/react-native/Libraries/NativeAnimation`)
-  - React-RCTAppDelegate (from `../poclink-js/node_modules/react-native/Libraries/AppDelegate`)
-  - React-RCTBlob (from `../poclink-js/node_modules/react-native/Libraries/Blob`)
-  - React-RCTFabric (from `../poclink-js/node_modules/react-native/React`)
-  - React-RCTFBReactNativeSpec (from `../poclink-js/node_modules/react-native/React`)
-  - React-RCTImage (from `../poclink-js/node_modules/react-native/Libraries/Image`)
-  - React-RCTLinking (from `../poclink-js/node_modules/react-native/Libraries/LinkingIOS`)
-  - React-RCTNetwork (from `../poclink-js/node_modules/react-native/Libraries/Network`)
-  - React-RCTRuntime (from `../poclink-js/node_modules/react-native/React/Runtime`)
-  - React-RCTSettings (from `../poclink-js/node_modules/react-native/Libraries/Settings`)
-  - React-RCTText (from `../poclink-js/node_modules/react-native/Libraries/Text`)
-  - React-RCTVibration (from `../poclink-js/node_modules/react-native/Libraries/Vibration`)
-  - React-rendererconsistency (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/consistency`)
-  - React-renderercss (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/css`)
-  - React-rendererdebug (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/debug`)
-  - React-RuntimeApple (from `../poclink-js/node_modules/react-native/ReactCommon/react/runtime/platform/ios`)
-  - React-RuntimeCore (from `../poclink-js/node_modules/react-native/ReactCommon/react/runtime`)
-  - React-runtimeexecutor (from `../poclink-js/node_modules/react-native/ReactCommon/runtimeexecutor`)
-  - React-RuntimeHermes (from `../poclink-js/node_modules/react-native/ReactCommon/react/runtime`)
-  - React-runtimescheduler (from `../poclink-js/node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
-  - React-timing (from `../poclink-js/node_modules/react-native/ReactCommon/react/timing`)
-  - React-utils (from `../poclink-js/node_modules/react-native/ReactCommon/react/utils`)
+  - RCT-Folly (from `../../poclink-js/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
+  - RCTDeprecation (from `../../poclink-js/node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation`)
+  - RCTRequired (from `../../poclink-js/node_modules/react-native/Libraries/Required`)
+  - RCTTypeSafety (from `../../poclink-js/node_modules/react-native/Libraries/TypeSafety`)
+  - React (from `../../poclink-js/node_modules/react-native/`)
+  - React-callinvoker (from `../../poclink-js/node_modules/react-native/ReactCommon/callinvoker`)
+  - React-Core (from `../../poclink-js/node_modules/react-native/`)
+  - React-Core/RCTWebSocket (from `../../poclink-js/node_modules/react-native/`)
+  - React-CoreModules (from `../../poclink-js/node_modules/react-native/React/CoreModules`)
+  - React-cxxreact (from `../../poclink-js/node_modules/react-native/ReactCommon/cxxreact`)
+  - React-debug (from `../../poclink-js/node_modules/react-native/ReactCommon/react/debug`)
+  - React-defaultsnativemodule (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/defaults`)
+  - React-domnativemodule (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/dom`)
+  - React-Fabric (from `../../poclink-js/node_modules/react-native/ReactCommon`)
+  - React-FabricComponents (from `../../poclink-js/node_modules/react-native/ReactCommon`)
+  - React-FabricImage (from `../../poclink-js/node_modules/react-native/ReactCommon`)
+  - React-featureflags (from `../../poclink-js/node_modules/react-native/ReactCommon/react/featureflags`)
+  - React-featureflagsnativemodule (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/featureflags`)
+  - React-graphics (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/graphics`)
+  - React-hermes (from `../../poclink-js/node_modules/react-native/ReactCommon/hermes`)
+  - React-idlecallbacksnativemodule (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks`)
+  - React-ImageManager (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios`)
+  - React-jserrorhandler (from `../../poclink-js/node_modules/react-native/ReactCommon/jserrorhandler`)
+  - React-jsi (from `../../poclink-js/node_modules/react-native/ReactCommon/jsi`)
+  - React-jsiexecutor (from `../../poclink-js/node_modules/react-native/ReactCommon/jsiexecutor`)
+  - React-jsinspector (from `../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern`)
+  - React-jsinspectorcdp (from `../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/cdp`)
+  - React-jsinspectornetwork (from `../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/network`)
+  - React-jsinspectortracing (from `../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/tracing`)
+  - React-jsitooling (from `../../poclink-js/node_modules/react-native/ReactCommon/jsitooling`)
+  - React-jsitracing (from `../../poclink-js/node_modules/react-native/ReactCommon/hermes/executor/`)
+  - React-logger (from `../../poclink-js/node_modules/react-native/ReactCommon/logger`)
+  - React-Mapbuffer (from `../../poclink-js/node_modules/react-native/ReactCommon`)
+  - React-microtasksnativemodule (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/microtasks`)
+  - React-NativeModulesApple (from `../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios`)
+  - React-oscompat (from `../../poclink-js/node_modules/react-native/ReactCommon/oscompat`)
+  - React-perflogger (from `../../poclink-js/node_modules/react-native/ReactCommon/reactperflogger`)
+  - React-performancetimeline (from `../../poclink-js/node_modules/react-native/ReactCommon/react/performance/timeline`)
+  - React-RCTActionSheet (from `../../poclink-js/node_modules/react-native/Libraries/ActionSheetIOS`)
+  - React-RCTAnimation (from `../../poclink-js/node_modules/react-native/Libraries/NativeAnimation`)
+  - React-RCTAppDelegate (from `../../poclink-js/node_modules/react-native/Libraries/AppDelegate`)
+  - React-RCTBlob (from `../../poclink-js/node_modules/react-native/Libraries/Blob`)
+  - React-RCTFabric (from `../../poclink-js/node_modules/react-native/React`)
+  - React-RCTFBReactNativeSpec (from `../../poclink-js/node_modules/react-native/React`)
+  - React-RCTImage (from `../../poclink-js/node_modules/react-native/Libraries/Image`)
+  - React-RCTLinking (from `../../poclink-js/node_modules/react-native/Libraries/LinkingIOS`)
+  - React-RCTNetwork (from `../../poclink-js/node_modules/react-native/Libraries/Network`)
+  - React-RCTRuntime (from `../../poclink-js/node_modules/react-native/React/Runtime`)
+  - React-RCTSettings (from `../../poclink-js/node_modules/react-native/Libraries/Settings`)
+  - React-RCTText (from `../../poclink-js/node_modules/react-native/Libraries/Text`)
+  - React-RCTVibration (from `../../poclink-js/node_modules/react-native/Libraries/Vibration`)
+  - React-rendererconsistency (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/consistency`)
+  - React-renderercss (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/css`)
+  - React-rendererdebug (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/debug`)
+  - React-RuntimeApple (from `../../poclink-js/node_modules/react-native/ReactCommon/react/runtime/platform/ios`)
+  - React-RuntimeCore (from `../../poclink-js/node_modules/react-native/ReactCommon/react/runtime`)
+  - React-runtimeexecutor (from `../../poclink-js/node_modules/react-native/ReactCommon/runtimeexecutor`)
+  - React-RuntimeHermes (from `../../poclink-js/node_modules/react-native/ReactCommon/react/runtime`)
+  - React-runtimescheduler (from `../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/runtimescheduler`)
+  - React-timing (from `../../poclink-js/node_modules/react-native/ReactCommon/react/timing`)
+  - React-utils (from `../../poclink-js/node_modules/react-native/ReactCommon/react/utils`)
   - ReactAppDependencyProvider (from `build/generated/ios`)
   - ReactCodegen (from `build/generated/ios`)
-  - ReactCommon/turbomodule/core (from `../poclink-js/node_modules/react-native/ReactCommon`)
+  - ReactCommon/turbomodule/core (from `../../poclink-js/node_modules/react-native/ReactCommon`)
   - SocketRocket (~> 0.7.1)
-  - Yoga (from `../poclink-js/node_modules/react-native/ReactCommon/yoga`)
+  - Yoga (from `../../poclink-js/node_modules/react-native/ReactCommon/yoga`)
   - YYKit
 
 SPEC REPOS:
@@ -2408,148 +2408,148 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   boost:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/boost.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/boost.podspec"
   DoubleConversion:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   fast_float:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/fast_float.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/fast_float.podspec"
   FBLazyVector:
-    :path: "../poclink-js/node_modules/react-native/Libraries/FBLazyVector"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/FBLazyVector"
   fmt:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/fmt.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/fmt.podspec"
   glog:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/glog.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
-    :podspec: "../poclink-js/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/sdks/hermes-engine/hermes-engine.podspec"
     :tag: hermes-2025-07-07-RNv0.81.0-e0fc67142ec0763c6b6153ca2bf96df815539782
   RCT-Folly:
-    :podspec: "../poclink-js/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
+    :podspec: "../../poclink-js/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTDeprecation:
-    :path: "../poclink-js/node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation"
+    :path: "../../poclink-js/node_modules/react-native/ReactApple/Libraries/RCTFoundation/RCTDeprecation"
   RCTRequired:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Required"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Required"
   RCTTypeSafety:
-    :path: "../poclink-js/node_modules/react-native/Libraries/TypeSafety"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/TypeSafety"
   React:
-    :path: "../poclink-js/node_modules/react-native/"
+    :path: "../../poclink-js/node_modules/react-native/"
   React-callinvoker:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/callinvoker"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/callinvoker"
   React-Core:
-    :path: "../poclink-js/node_modules/react-native/"
+    :path: "../../poclink-js/node_modules/react-native/"
   React-CoreModules:
-    :path: "../poclink-js/node_modules/react-native/React/CoreModules"
+    :path: "../../poclink-js/node_modules/react-native/React/CoreModules"
   React-cxxreact:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/cxxreact"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/cxxreact"
   React-debug:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/debug"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/debug"
   React-defaultsnativemodule:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/defaults"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/defaults"
   React-domnativemodule:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/dom"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/dom"
   React-Fabric:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon"
   React-FabricComponents:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon"
   React-FabricImage:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon"
   React-featureflags:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/featureflags"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/featureflags"
   React-featureflagsnativemodule:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/featureflags"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/featureflags"
   React-graphics:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/graphics"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/graphics"
   React-hermes:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/hermes"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/hermes"
   React-idlecallbacksnativemodule:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/idlecallbacks"
   React-ImageManager:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/imagemanager/platform/ios"
   React-jserrorhandler:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jserrorhandler"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jserrorhandler"
   React-jsi:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsi"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsi"
   React-jsiexecutor:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsiexecutor"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsiexecutor"
   React-jsinspector:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern"
   React-jsinspectorcdp:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/cdp"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/cdp"
   React-jsinspectornetwork:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/network"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/network"
   React-jsinspectortracing:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/tracing"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsinspector-modern/tracing"
   React-jsitooling:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/jsitooling"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/jsitooling"
   React-jsitracing:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/hermes/executor/"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/hermes/executor/"
   React-logger:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/logger"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/logger"
   React-Mapbuffer:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon"
   React-microtasksnativemodule:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/microtasks"
   React-NativeModulesApple:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/nativemodule/core/platform/ios"
   React-oscompat:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/oscompat"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/oscompat"
   React-perflogger:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/reactperflogger"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/reactperflogger"
   React-performancetimeline:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/performance/timeline"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/performance/timeline"
   React-RCTActionSheet:
-    :path: "../poclink-js/node_modules/react-native/Libraries/ActionSheetIOS"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
-    :path: "../poclink-js/node_modules/react-native/Libraries/NativeAnimation"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/NativeAnimation"
   React-RCTAppDelegate:
-    :path: "../poclink-js/node_modules/react-native/Libraries/AppDelegate"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/AppDelegate"
   React-RCTBlob:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Blob"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Blob"
   React-RCTFabric:
-    :path: "../poclink-js/node_modules/react-native/React"
+    :path: "../../poclink-js/node_modules/react-native/React"
   React-RCTFBReactNativeSpec:
-    :path: "../poclink-js/node_modules/react-native/React"
+    :path: "../../poclink-js/node_modules/react-native/React"
   React-RCTImage:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Image"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Image"
   React-RCTLinking:
-    :path: "../poclink-js/node_modules/react-native/Libraries/LinkingIOS"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/LinkingIOS"
   React-RCTNetwork:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Network"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Network"
   React-RCTRuntime:
-    :path: "../poclink-js/node_modules/react-native/React/Runtime"
+    :path: "../../poclink-js/node_modules/react-native/React/Runtime"
   React-RCTSettings:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Settings"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Settings"
   React-RCTText:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Text"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Text"
   React-RCTVibration:
-    :path: "../poclink-js/node_modules/react-native/Libraries/Vibration"
+    :path: "../../poclink-js/node_modules/react-native/Libraries/Vibration"
   React-rendererconsistency:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/consistency"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/consistency"
   React-renderercss:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/css"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/css"
   React-rendererdebug:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/debug"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/debug"
   React-RuntimeApple:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/runtime/platform/ios"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/runtime/platform/ios"
   React-RuntimeCore:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/runtime"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/runtime"
   React-runtimeexecutor:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/runtimeexecutor"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/runtimeexecutor"
   React-RuntimeHermes:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/runtime"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/runtime"
   React-runtimescheduler:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/renderer/runtimescheduler"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/renderer/runtimescheduler"
   React-timing:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/timing"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/timing"
   React-utils:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/react/utils"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/react/utils"
   ReactAppDependencyProvider:
     :path: build/generated/ios
   ReactCodegen:
     :path: build/generated/ios
   ReactCommon:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon"
   Yoga:
-    :path: "../poclink-js/node_modules/react-native/ReactCommon/yoga"
+    :path: "../../poclink-js/node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
   AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
@@ -2632,12 +2632,12 @@ SPEC CHECKSUMS:
   React-timing: 5bad9dea3601f85a77f854279d368131f8601123
   React-utils: dbb3b287c40f960321a3412b13b6b558b8687acd
   ReactAppDependencyProvider: 50d5506ddd091d4ed24b88b661ce9a0e17347357
-  ReactCodegen: 168ebdc9a2524435a9060e0decf1cdc245b5a532
+  ReactCodegen: ed7714ea3c592569006e1b6f9c1e56d13e06b21a
   ReactCommon: 8fafefb37d562f9e4bbbc9081ca4501f178a97ec
   SocketRocket: d4aabe649be1e368d1318fdf28a022d714d65748
   Yoga: 3196a843cc5f4bc433f1a41cf17cdf804a01a529
   YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
 
-PODFILE CHECKSUM: 9dc9952b0d80e78cbce4d2a2bc979f4afb31dfe7
+PODFILE CHECKSUM: d4f0f75af1966c3eaeed9adc2f7f3780a5fa7f9f
 
 COCOAPODS: 1.16.2

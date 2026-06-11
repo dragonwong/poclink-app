@@ -1,15 +1,15 @@
 # The simplest working Podfile!
-require_relative "../poclink-js/node_modules/react-native/scripts/react_native_pods"
+require_relative "../../poclink-js/node_modules/react-native/scripts/react_native_pods"
 
 platform :ios, min_ios_version_supported
 prepare_react_native_project!
 
 target 'poclink-app' do
-  react_native_path = "../poclink-js/node_modules/react-native"
+  react_native_path = "../../poclink-js/node_modules/react-native"
 
   use_react_native!(
     :path => react_native_path,
-    :app_path => File.expand_path("../poclink-js"),
+    :app_path => File.expand_path("../../poclink-js"),
     :hermes_enabled => true,
     :fabric_enabled => false,
     :new_arch_enabled => false

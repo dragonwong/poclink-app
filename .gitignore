@@ -24,3 +24,7 @@ DerivedData/
 *.ipa
 *.dSYM.zip
 *.dSYM.appex
+# Backup files
+*.backup
+# Privacy plist backup
+*.xcprivacy.backup

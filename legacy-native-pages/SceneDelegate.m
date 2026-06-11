@@ -7,24 +7,31 @@
 
 #import "SceneDelegate.h"
 #import <GoogleSignIn/GoogleSignIn.h>
+#import <React/RCTBundleURLProvider.h>
+#import <React/RCTRootView.h>
 #import "AppDelegate.h"
 
 @implementation SceneDelegate
 
 
 - (void)scene:(UIScene *)scene willConnectToSession:(UISceneSession *)session options:(UISceneConnectionOptions *)connectionOptions {
-    // Create window and set root view controller from storyboard
+    // Create window for React Native
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     
-    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    UINavigationController *navController = [storyboard instantiateInitialViewController];
-    self.window.rootViewController = navController;
-    [self.window makeKeyAndVisible];
-    
-    // Set navigation controller delegate to AppDelegate for unified route logging
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
-    navController.delegate = appDelegate;
+    NSURL *jsCodeLocation = [appDelegate bundleURL];
+    
+    RCTRootView *rootView = [[RCTRootView alloc] initWithBundleURL:jsCodeLocation
+                                                        moduleName:@"PocLink"
+                                                 initialProperties:nil
+                                                     launchOptions:connectionOptions.launchOptions];
+    rootView.backgroundColor = [[UIColor alloc] initWithRed:1.0f green:1.0f blue:1.0f alpha:1];
+    
+    UIViewController *rootViewController = [UIViewController new];
+    rootViewController.view = rootView;
+    self.window.rootViewController = rootViewController;
+    [self.window makeKeyAndVisible];
 }
 
 
